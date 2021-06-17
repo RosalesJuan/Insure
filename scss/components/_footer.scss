@@ -1,0 +1,109 @@
+@use '../abstracts/' as *;
+
+.footer-pattern-mobile{
+  display: none;
+}
+
+footer {
+  padding: 6.5625rem 10.375rem;
+  background: $very-lightgray;
+  position: relative;
+}
+
+footer .top-section {
+  display: flex;
+  padding-bottom: 2rem;
+  a.title{
+    z-index: 99;
+    flex: 1;
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: $very-darkviolet;
+    font-weight: bold;
+  }
+  .icon-links{
+    z-index: 99;
+    .fa-facebook-square::before{
+      @include icon-style;
+      content: '\f082';
+      font-weight: 400;
+    }
+    .fa-twitter-square::before{
+      @include icon-style;
+      content: '\f081';
+      font-weight: 400;
+    }
+    .fa-pinterest-square::before{
+      @include icon-style;
+      content: '\f0d3';
+      font-weight: 900;
+    }
+    .fa-instagram::before{
+      @include icon-style;
+      content: '\f16d';
+      font-weight: 900;
+    }
+  }
+}
+
+footer .footer-links{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  border-top: solid 1.5px $dark-grayishviolet;
+  p{
+    color: $dark-grayishviolet;
+    padding-bottom: 2rem;
+    font-weight: bold;
+  }
+  div ul{
+    li {
+      list-style: none;
+      padding-bottom: 0.75rem;
+      margin: auto;
+      a{
+        color: $very-darkviolet;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+footer img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-section .icon-links a:hover{
+  &::before{
+    color: #000;
+  }
+}
+footer .footer-links div ul li a:hover{
+  text-decoration: underline $grayish-blue;
+}
+
+@media only screen and (max-width: 375px){
+  .footer-pattern-desktop{
+    display: none;
+  }
+  .footer-pattern-mobile{
+    display: block;
+  }
+  footer{
+    padding-inline: 1rem;
+    text-align: center;
+    .top-section{
+      flex-direction: column;
+    }
+    .footer-links{
+      flex-direction: column;
+      p{
+        padding-top: 2rem;
+      }
+    }
+  }
+}
+

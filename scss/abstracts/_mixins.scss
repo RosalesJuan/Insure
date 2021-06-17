@@ -1,0 +1,13 @@
+
+
+@mixin icon-style{
+  font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
+  display: inline-block;
+  color: hsl(273, 4%, 51%);
+  font-size: 1.75rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin: 0.5rem 0.5rem;
+  -webkit-font-smoothing: antialiased;
+}

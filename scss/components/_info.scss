@@ -1,0 +1,108 @@
+@use '../abstracts/' as *;
+
+.info-banner-pattern-mobile{
+  display: none;
+}
+#info {
+  .pattern-left{
+    position: absolute;
+    top: -15%;
+    left: 0;
+  }
+}
+#info{
+  padding: 18.375rem 10.375rem 8rem;
+  position: relative;
+  .benefits{
+    display: flex;
+    padding: 5rem 0 8rem;
+    h4{
+      padding: 1.725rem 0;
+      font-weight: normal;
+    }
+    p{
+      color: $dark-grayishviolet;
+    }
+  }
+}
+
+#info{
+  h1{
+    padding-top: 4rem;
+    position: relative;
+  }
+  h1::after{
+    content: '';
+    width: 8.75rem;
+    height: 1px;
+    position: absolute;
+    background: $dark-violet;
+    top: 0;
+    left: 0;
+  }
+}
+
+#info .info-banner{
+  padding: 4.5rem 4.5rem;
+  background: $dark-violet;
+  color: $very-lightgray;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  h2{
+    max-width: 20ch;
+  }
+  a{
+    border: 1px solid $very-lightgray;
+    padding: 0.5rem 1.625rem;
+    color: $very-lightgray;
+    text-decoration: none;
+    z-index: 3;
+  }
+  img{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+#info .info-banner a:hover{
+  background: #fff;
+  cursor: pointer;
+  color: #000;
+}
+
+
+@media only screen and (max-width: 375px){
+  
+.info-banner-pattern{
+  display: none;
+}
+.info-banner-pattern-mobile{
+  display: block;
+}
+  #info{
+    padding: 4rem 1rem;
+    text-align: center;
+    .benefits{
+      flex-direction: column;
+    }
+    h1{
+      font-size: 3rem;
+    }
+    h1::after{
+      left:28%;
+    }
+  }
+  #info .info-banner{
+    flex-direction: column;
+    padding-inline: 2rem;
+    h2{
+      font-size: 2.25rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
